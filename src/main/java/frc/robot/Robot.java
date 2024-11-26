@@ -57,9 +57,9 @@ public class Robot extends TimedRobot {
   public void teleopPeriodic() {} {
   m_myrobot.tankDrive(m_leftstick.getY(), m_rightstick.getY());
   
-  if(gameButton1.equals(null)){
+  if(gameButton1.getAsBoolean()){
      arm_m.set(0.3);
-} else if(gameButton2.equals(null)){
+} else if(gameButton2.getAsBoolean()){
      arm_m.set(-0.3);
 }  else {
      arm_m.set(0);
